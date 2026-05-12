@@ -1,3 +1,5 @@
+const messageRoutes = require("./routes/message.routes");
+
 const userRoutes = require("./routes/user.routes");
 
 // Importerar Express (ramverk för backend API)
@@ -24,6 +26,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/health", healthRoutes);
 
 app.use("/api/user", userRoutes);
+
+app.use("/api/messages", messageRoutes);
 
 // Test-route för att se att servern kör
 app.get("/", (req, res) => {
